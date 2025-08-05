@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Newsreader';
+    src: url(../../public/fonts/Newsreader-VariableFont_opsz\,wght.ttf);
+}
