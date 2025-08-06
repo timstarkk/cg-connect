@@ -15,18 +15,18 @@ export const Navbar: FC<NavbarProps> = ({ something, ...props }) => {
     <nav className="border-b border-gray-200">
       <div className="h-[62px] w-full max-w-6xl mx-auto flex items-center justify-between px-4">
         <Link href="/">
-          <h2 className="text-2xl font-newsreader font-semibold">Tim Stark</h2>
+          <h2 className="text-2xl font-newsreader font-semibold">CG Connect</h2>
         </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6">
-          <Link href="#bio">About</Link>
-          <Link href="#projects">Projects</Link>
+          <Link href="/about">About</Link>
+          <Link href="/services">Services</Link>
           <Link
-            href="https://docs.google.com/document/d/15bet1sTfrKPRN7pOPpI_3DOL0TMJysrxlmUCPI_Xxkg/edit?usp=sharing"
+            href="#"
             target="_blank"
             rel="noreferrer"
           >
-            Resume
+            Request a Demo
           </Link>
         </div>
         {/* Mobile Hamburger Button */}
@@ -52,19 +52,19 @@ export const Navbar: FC<NavbarProps> = ({ something, ...props }) => {
       {mobileMenuOpen && (
         <div className="md:hidden">
           <div className="px-4 pb-4 flex flex-col gap-2">
-            <Link href="#bio" className="block py-2">
+            <Link href="/about" className="block py-2">
               About
             </Link>
-            <Link href="#projects" className="block py-2">
-              Projects
+            <Link href="/services" className="block py-2">
+              Services
             </Link>
             <Link
-              href="https://docs.google.com/document/d/15bet1sTfrKPRN7pOPpI_3DOL0TMJysrxlmUCPI_Xxkg/edit?usp=sharing"
+              href="#"
               target="_blank"
               rel="noreferrer"
               className="block py-2"
             >
-              Resume
+              Request a Demo
             </Link>
           </div>
         </div>
