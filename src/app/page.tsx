@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 const Home: FC = () => {
   return <div className="relative">
-    <header className="h-[551px] bg-spaceGray text-spaceWhite flex flex-col justify-center items-center gap-4 bg-[url('../../astro.avif')] bg-[center_200px_left_200px] bg-no-repeat bg-contain">
+    <header className="h-[551px] bg-spaceGray text-spaceWhite flex flex-col justify-center items-center md:items-start gap-4 bg-[url('../../astro.avif')] bg-[center_200px_left_200px] bg-no-repeat bg-contain pl-0 md:pl-[20%]">
       <h2 className="text-6xl font-newsreader font-bold">CG Connect</h2>
       <h3 className="text-xl font-newsreader font-semibold">Automate your business with AI</h3>
       <div className="flex gap-4">
