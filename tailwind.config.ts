@@ -22,8 +22,18 @@ const config: Config = {
       },
     },
     colors: {
-      'spaceGray': '#1B1C1E',
-      'spaceWhite': '#E4E5E7'
+      'primary': '#3B82F6', // blue-500
+      'primary-dark': '#1E40AF', // blue-800
+      'accent': '#06B6D4', // cyan-500
+      'accent-dark': '#0E7490', // cyan-800
+      'bg': '#18181B', // zinc-900
+      'surface': '#F1F5F9', // slate-100
+      'onPrimary': '#FFFFFF',
+      'onAccent': '#FFFFFF',
+      'onBg': '#F1F5F9',
+      'onSurface': '#18181B',
+      'spaceGray': '#1B1C1E', // legacy
+      'spaceWhite': '#E4E5E7', // legacy
     },
   },
   plugins: [],

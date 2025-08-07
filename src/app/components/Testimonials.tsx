@@ -2,22 +2,23 @@ import React from 'react';
 
 const testimonials = [
   {
-    quote: "Tim is a dedicated and motivated developer with a keen eye for identifying solutions to problems that come his way. In each project that we have worked together, Tim has worked tirelessly to make sure the solution that we are providing is above and beyond expectations. He is motivated, humble, sharp, and willing to learn whatever is asked of him. He would, without a doubt, be an asset to any team that he works on.",
-    author: "Tommy Vinyard",
-    title: "Lead Software Engineer, Oracle"
+    quote: "CG Connect transformed our operations. Their AI automation solutions helped us cut manual work by 60% and improved our data accuracy tremendously.",
+    author: "Sarah Lee",
+    title: "COO, FinTech Corp"
   },
   {
-    quote: "Tim is a knowledgeable developer who will effortlessly prove to be an asset in any development team he's part of. He thinks quick in his feet, and will continuously surprise you with his 'out of the box' thinking and fresh approaches to problems. He's effective, fast, and is an excellent problem-solver. I would recommend Tim to any developer related position.",
-    author: "Erwin Angeles",
-    title: "Software Engineer, TrackFive"
+    quote: "The team at CG Connect delivered seamless integration with our existing systems. We saw ROI in just a few months.",
+    author: "Michael Chen",
+    title: "IT Director, HealthPlus"
   }
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-12 bg-gray-50 border-y border-gray-100">
+    <section className="py-12 bg-surface border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+        <h2 className="text-2xl font-bold text-primary mb-10 text-center">What Our Clients Say</h2>
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Tommy's testimonial - First on mobile, Last on desktop */}
           <div className="relative order-first md:order-last md:col-span-2">
             <div className="absolute -top-2 left-0 text-4xl text-spaceGray opacity-20">
