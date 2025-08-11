@@ -2,19 +2,31 @@ import React from 'react';
 
 export default function Bio() {
   return (
-    <section className="relative py-20">
-      {/* Subtle background band for separation */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-transparent" />
+    <section className="relative py-20 bg-bg">
+      {/* Subtle background pattern for visual interest */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <svg width="100%" height="100%" className="opacity-20">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" className="text-gray-700"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+      </div>
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* About card */}
           <div className="md:col-span-7">
-            <div className="h-full rounded-2xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+            <div className="h-full rounded-2xl bg-gray-900/80 backdrop-blur-sm p-8 shadow-xl ring-1 ring-gray-800/50 border border-gray-800/30">
               <h3 className="text-2xl font-newsreader font-semibold text-primary mb-4">
                 About CG Connect
               </h3>
-              <div className="space-y-4 text-slate-700 leading-7">
+              <div className="space-y-4 text-onBg/90 leading-7">
                 <p>
                   CG Connect empowers businesses to automate complex processes, integrate data,
                   and accelerate growth using cutting-edge AI technology. Our mission is to make
@@ -30,7 +42,7 @@ export default function Bio() {
 
           {/* Why choose us card */}
           <div className="md:col-span-5">
-            <div className="h-full rounded-2xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+            <div className="h-full rounded-2xl bg-gray-900/80 backdrop-blur-sm p-8 shadow-xl ring-1 ring-gray-800/50 border border-gray-800/30">
               <h3 className="text-2xl font-newsreader font-semibold text-primary mb-4">
                 Why Choose Us
               </h3>
@@ -42,7 +54,7 @@ export default function Bio() {
                   'Expert support from strategy to implementation',
                   'Proven results across multiple industries',
                 ].map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-slate-700">
+                  <li key={point} className="flex items-start gap-3 text-onBg/90">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"

@@ -12,19 +12,20 @@ export const Navbar: FC<NavbarProps> = ({ something, ...props }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="border-b border-gray-200">
+    <nav className="border-b border-gray-800 bg-bg/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="h-[62px] w-full max-w-6xl mx-auto flex items-center justify-between px-4">
         <Link href="/">
-          <h2 className="text-2xl font-newsreader font-semibold">CG Connect</h2>
+          <h2 className="text-2xl font-newsreader font-semibold text-onBg">CG Connect</h2>
         </Link>
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6">
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
+          <Link href="/about" className="text-onBg/80 hover:text-onBg transition-colors">About</Link>
+          <Link href="/services" className="text-onBg/80 hover:text-onBg transition-colors">Services</Link>
           <Link
             href="#"
             target="_blank"
             rel="noreferrer"
+            className="text-onBg/80 hover:text-onBg transition-colors"
           >
             Request a Demo
           </Link>
@@ -33,7 +34,7 @@ export const Navbar: FC<NavbarProps> = ({ something, ...props }) => {
         <div className="md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-md hover:bg-gray-100 focus:outline-none"
+            className="p-2 rounded-md hover:bg-gray-800 focus:outline-none text-onBg"
             aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? (
@@ -50,19 +51,19 @@ export const Navbar: FC<NavbarProps> = ({ something, ...props }) => {
       </div>
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden bg-bg/95 backdrop-blur-sm border-t border-gray-800">
           <div className="px-4 pb-4 flex flex-col gap-2">
-            <Link href="/about" className="block py-2">
+            <Link href="/about" className="block py-2 text-onBg/80 hover:text-onBg transition-colors">
               About
             </Link>
-            <Link href="/services" className="block py-2">
+            <Link href="/services" className="block py-2 text-onBg/80 hover:text-onBg transition-colors">
               Services
             </Link>
             <Link
               href="#"
               target="_blank"
               rel="noreferrer"
-              className="block py-2"
+              className="block py-2 text-onBg/80 hover:text-onBg transition-colors"
             >
               Request a Demo
             </Link>
